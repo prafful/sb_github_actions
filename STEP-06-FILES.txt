@@ -1,0 +1,23 @@
+FILES ADDED OR CHANGED IN STEP 06
+
+CHANGED
+- pom.xml
+- README.md
+- src/main/java/com/friends/community/repository/FriendsRepository.java
+- src/main/java/com/friends/community/service/FriendsService.java
+- src/main/java/com/friends/community/api/FriendsRestController.java
+
+ADDED
+- STEP-06-FILES.txt
+
+CURRENTLY IMPLEMENTED
+- GET /friends/api/1.0/all
+- GET /friends/api/1.0/{id}
+- POST /friends/api/1.0/ (NEW)
+
+NOT INCLUDED YET
+- PUT/update
+- DELETE
+- Filters
+- Validation and exception handling
+- Additional models or relationships
