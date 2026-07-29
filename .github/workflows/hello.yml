@@ -26,8 +26,8 @@ jobs:
 
       - name: Make Maven Wrapper Executable
 
-        run: chmod +x mvn
+        run: chmod +x mvnw
 
       - name: Build Spring Boot Project
 
-        run: ./mvn clean test
+        run: ./mvnw clean test
