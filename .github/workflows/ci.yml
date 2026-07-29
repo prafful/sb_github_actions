@@ -1,4 +1,4 @@
-name: Spring Boot CI
+name: Spring Boot CI/CD
 
 on:
   push:
@@ -10,6 +10,7 @@ on:
       - master
 
 jobs:
+
   build:
 
     runs-on: ubuntu-latest
@@ -60,3 +61,35 @@ jobs:
         with:
           name: spring-boot-jar
           path: target/*.jar
+
+  deploy:
+
+    needs: build
+
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+
+    runs-on: self-hosted
+
+    steps:
+
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Create .env
+        run: |
+          echo "DB_URL=jdbc:mysql://mysql:3306/friends_community" > .env
+          echo "DB_USERNAME=root" >> .env
+          echo "DB_PASSWORD=n3u3da!" >> .env
+          echo "MYSQL_ROOT_PASSWORD=n3u3da!" >> .env
+          echo "MYSQL_DATABASE=friends_community" >> .env
+
+      - name: Deploy Application
+        run: |
+          docker compose down
+          docker compose up -d --build
+
+      - name: Show Running Containers
+        run: docker ps
+
+      - name: Show Spring Boot Logs
+        run: docker logs friends-app --tail=50
