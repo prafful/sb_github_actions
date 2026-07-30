@@ -28,7 +28,7 @@ services:
 
   springboot:
 
-    image: ghcr.io/prafful/friends-community:latest
+    build: .
 
     container_name: friends-app
 
