@@ -85,8 +85,8 @@ jobs:
 
       - name: Deploy Application
         run: |
-          docker compose down
-          docker compose up -d --build
+          docker-compose down
+          docker-compose up -d --build
 
       - name: Show Running Containers
         run: docker ps
