@@ -8,4 +8,4 @@ VALUES
     (2, 'OMG', 30, 'Hyderabad'),
     (3, 'OTR', 35, 'Chennai'),
     (4, 'CBJ', 25, 'Delhi'),
-    (5, 'TTO', 25, 'JhoomriTalaiya');
+    (5, 'TTO', 44, 'JT');
