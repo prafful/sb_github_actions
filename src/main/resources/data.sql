@@ -4,7 +4,8 @@
 
 INSERT IGNORE INTO friends (id, name, age, city)
 VALUES
-    (1, 'Rajini', 70, 'Chennai'),
-    (2, 'Bhargavi', 30, 'Hyderabad'),
-    (3, 'Dhanush', 35, 'Chennai'),
-    (4, 'Priyanshu', 25, 'Delhi');
+    (1, 'OBB', 70, 'Chennai'),
+    (2, 'OMG', 30, 'Hyderabad'),
+    (3, 'OTR', 35, 'Chennai'),
+    (4, 'CBJ', 25, 'Delhi'),
+    (5, 'TTO', 25, 'JhoomriTalaiya');
