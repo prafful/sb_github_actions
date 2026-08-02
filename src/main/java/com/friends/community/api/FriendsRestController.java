@@ -55,6 +55,7 @@ public class FriendsRestController {
     public ResponseEntity<Friend> findById(@PathVariable Long id) {
         System.out.println("Incoming GET request for /friends/api/1.0/" + id);
         Friend friend = friendService.findById(id);
+        System.out.println("hello");
         if (friend == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
