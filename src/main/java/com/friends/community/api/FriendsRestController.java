@@ -30,10 +30,11 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/friends/api/1.0")
-@CrossOrigin(origins = {
-        "http://127.0.0.1:5500",
-        "http://localhost:5500"
-})
+//@CrossOrigin(origins = {
+//        "http://127.0.0.1:5500",
+//        "http://localhost:5500"
+//})
+@CrossOrigin(origins = "*")
 public class FriendsRestController {
 
     private final FriendsService friendService;
@@ -85,7 +86,7 @@ public class FriendsRestController {
      * HTTP 201 (Created) — the standard status code for successful creates.
      * The body contains the Friend with its auto-generated 'id'.
      */
-    @PostMapping("/")
+    @PostMapping("/add")
     public ResponseEntity<Friend> createFriend(@RequestBody Friend friend) {
 
         System.out.println("Incoming POST request to create friend: " + friend.getName());
