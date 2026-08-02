@@ -99,4 +99,4 @@ jobs:
         if: github.event_name == 'push'
         run: |
           curl -X POST \
-          "${{ secrets.JENKINS_URL }}/buildByToken/build?job=backend-deploy-job&token=${{ secrets.JENKINS_TOKEN }}"
+          "https://voter-tilt-operation.ngrok-free.dev/buildByToken/build?job=backend-deploy-job&token=deploy1234"
